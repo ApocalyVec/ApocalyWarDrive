@@ -1,6 +1,6 @@
 # ApocalyWarDrive
 
-ApocalyWarDrive is for reading WIFI RSSI. User need to specify sampling rate and duration.
+ApocalyWarDrive is for reading WIFI RSSI based on Linux OS. User need to specify sampling rate and duration.
 In future development, we will support addition sampling modes such as Continuous Sampling,
 localization and more. 
  
