@@ -1,6 +1,7 @@
 from wifi import Cell, Scheme
 import numpy as np
 import time
+from datetime import datetime
 
 nt_inerface = 'wlan0'
 
@@ -22,25 +23,24 @@ def record(interval, iterations):
 
     overall_start_time = time.time()
 
-    while i < iterations:
-        start_time = time.time()
+    for i in range(iterations):
+        # start_time = time.time()
 
-        i = i + 1
 
         cell = Cell.all(nt_inerface)
         ap_list = set(cell)
 
         for ap in ap_list:
-            recording_dict[time.time() - start_time] = ap_list
+            recording_dict[datetime.fromtimestamp(time.time())] = ap_list
 
         # end_time = time.time()
         # i_time = end_time - start_time
         # remaining_time = interval - i_time
-
-
+        #
+        #
         # if remaining_time > 0:
         #     time.sleep(remaining_time)
-
+        print(ap_list)
         time.sleep(interval)
 
 
